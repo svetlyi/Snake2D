@@ -24,4 +24,18 @@ public class Tail : MonoBehaviour {
 						}
 				}
 	}
+
+	public void GetTailFromFood () {
+		Debug.Log ("get tail from food");
+		GameObject head = GameObject.Find("Head");
+		Transform current = head.GetComponent<Initialization>().current;
+		Vector3 newPos = current.transform.position - current.transform.forward * 2;
+
+		this.gameObject.GetComponent<Tail>().target = current.transform;
+		this.gameObject.GetComponent<Tail>().enabled = true;
+		// дистанция между элементами хвоста - 2 единицы
+		this.gameObject.GetComponent<Tail>().targetDistance = 1;
+
+		head.GetComponent<Initialization> ().current = this.gameObject.transform;
+	}
 }

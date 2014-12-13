@@ -16,8 +16,9 @@ public class CollisionHandler : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D col) {
-		if (col.gameObject.name == "Food") {
-			Destroy(col.gameObject);
+		if ((col.gameObject.name == "Food") && (col.gameObject.GetComponent<Tail>().enabled == false)) {
+
+			col.gameObject.GetComponent<Tail>().GetTailFromFood();
 
 			//creating new food
 			Vector3 newPos = new Vector3(Random.Range(-4.0F, 2.0F), 4, Random.Range(-8.0F, 0F));
