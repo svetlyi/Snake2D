@@ -4,6 +4,7 @@ using System.Collections;
 public class Initialization : MonoBehaviour {
 	public GameObject prefabFood;
 	public Transform current;
+	private int distance = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -17,11 +18,17 @@ public class Initialization : MonoBehaviour {
 			GameObject tail;
 			tail = (GameObject)Instantiate(this.prefabFood, newPos, transform.rotation);
 			tail.name = "Food";
+
 			tail.GetComponent<Tail>().enabled = true;
 			tail.GetComponent<Tail>().target = current.transform;
 
 			// дистанция между элементами хвоста - 2 единицы
-			tail.GetComponent<Tail>().targetDistance = 1;
+			if (i==0) {
+				this.distance = 2;
+			} else {
+				this.distance = 1;
+			}
+			tail.GetComponent<Tail>().targetDistance = this.distance;
 			// удаляем с хвоста колайдер, так как он не нужен
 			Destroy(tail.collider);
 			// следующим хозяином будет новосозданный элемент хвоста

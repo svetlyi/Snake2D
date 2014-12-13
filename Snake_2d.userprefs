@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\CollisionHandler.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\Tail.cs">
     <Files>
-      <File FileName="Assets\Script\CollisionHandler.cs" Line="9" Column="17" />
+      <File FileName="Assets\Script\CollisionHandler.cs" Line="28" Column="23" />
+      <File FileName="Assets\Script\Tail.cs" Line="5" Column="25" />
+      <File FileName="Assets\Script\Initialization.cs" Line="31" Column="60" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

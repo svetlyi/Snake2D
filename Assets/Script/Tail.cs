@@ -29,7 +29,6 @@ public class Tail : MonoBehaviour {
 		Debug.Log ("get tail from food");
 		GameObject head = GameObject.Find("Head");
 		Transform current = head.GetComponent<Initialization>().current;
-		Vector3 newPos = current.transform.position - current.transform.forward * 2;
 
 		this.gameObject.GetComponent<Tail>().target = current.transform;
 		this.gameObject.GetComponent<Tail>().enabled = true;
